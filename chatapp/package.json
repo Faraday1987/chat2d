@@ -1,0 +1,14 @@
+{
+  "name": "chat2d",
+  "version": "1.0.0",
+  "description": "ChatGrafico",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "develop": "nohup node ./SERVER/app.js & "
+  },
+  "author": "Faraday",
+  "license": "MIT"
+}

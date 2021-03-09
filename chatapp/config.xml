@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<chat>
+	<server>127.0.0.1:8888</server>
+	<!-- <server>127.0.0.1:8088</server> -->
+	<avatars>120</avatars>
+	<rooms>6</rooms>
+	<emoticons>
+		<emoticon>
+			<text>:D</text>
+			<image>happy</image>
+		</emoticon>
+		<emoticon>
+			<text>;)</text>
+			<image>blink</image>
+		</emoticon>
+		<emoticon>
+			<text>:)</text>
+			<image>smile</image>
+		</emoticon>
+		<emoticon>
+			<text>:(</text>
+			<image>sad</image>
+		</emoticon>
+		<emoticon>
+			<text>:P</text>
+			<image>tongue</image>
+		</emoticon>
+		<emoticon>
+			<text>:'(</text>
+			<image>crying</image>
+		</emoticon>
+		<emoticon>
+			<text>:S</text>
+			<image>confuse</image>
+		</emoticon>
+		<emoticon>
+			<text>:O</text>
+			<image>surprise</image>
+		</emoticon>
+		<emoticon>
+			<text>:|</text>
+			<image>indifferent</image>
+		</emoticon>
+		<emoticon>
+			<text>:h:</text>
+			<image>cool</image>
+		</emoticon>
+		<emoticon>
+			<text>:6:</text>
+			<image>devil</image>
+		</emoticon>	
+		<emoticon>
+			<text>X(</text>
+			<image>angry</image>
+		</emoticon>	
+		<emoticon>
+			<text>:a:</text>
+			<image>angel</image>
+		</emoticon>	
+		<emoticon>
+			<text>:-$</text>
+			<image>blush</image>
+		</emoticon>	
+		<emoticon>
+			<text>*-:</text>
+			<image>kissed</image>
+		</emoticon>	
+		<emoticon>
+			<text>:-*</text>
+			<image>kiss</image>
+		</emoticon>
+		<emoticon>
+			<text>:*:</text>
+			<image>kissing</image>
+		</emoticon>				
+		<emoticon>
+			<text>|-)</text>
+			<image>yawn</image>
+		</emoticon>	
+		<emoticon>
+			<text>:l:</text>
+			<image>yawn</image>
+		</emoticon>
+		<emoticon>
+			<text>:f:</text>
+			<image>rose</image>
+		</emoticon>	
+		<emoticon>
+			<text>=P~</text>
+			<image>drool</image>
+		</emoticon>	
+		<emoticon>
+			<text>:))</text>
+			<image>laughing</image>
+		</emoticon>
+		<emoticon>
+			<text>:--:</text>
+			<image>sick</image>
+		</emoticon>
+		<emoticon>
+			<text>:?:</text>
+			<image>getlost</image>
+		</emoticon>				
+<emoticon>
+			<text>:poo:</text>
+			<image>poo</image>
+		</emoticon>
+		<emoticon>
+			<text>:rolleyes:</text>
+			<image>rolleyes</image>
+		</emoticon>					
+		<emoticon>
+			<text>:stop:</text>
+			<image>stop</image>
+		</emoticon>	
+		<emoticon>
+			<text>:teeth:</text>
+			<image>teeth</image>
+		</emoticon>	
+		<emoticon>
+			<text>:down:</text>
+			<image>thumbdown</image>
+		</emoticon>	
+		<emoticon>
+			<text>:up:</text>
+			<image>thumbsup</image>
+		</emoticon>							
+		<emoticon>
+			<text>:wacko:</text>
+			<image>wacko</image>
+		</emoticon>
+		<emoticon>
+			<text>:wrong:</text>
+			<image>wrong</image>
+		</emoticon>																													
+	</emoticons>
+	<languages>
+			<language id="es">
+			<name>Español</name>
+			<title>Bienvenido a ChatPoint.TV!</title>
+			<typename>Ingrese su Nombre</typename>
+			<defaultname>Invitado</defaultname>
+			<connect>Conectar</connect>
+			<announcement>Announcement:</announcement>
+			<chooseroom>Elige Sala</chooseroom>
+			<choosestatus>Estatus</choosestatus>
+			<choosename>Cambiar Nombre</choosename>
+			<confirm>Confirmar</confirm>
+			<online>Online</online>
+			<absent>Ausente</absent>
+			<eating>Comiendo</eating>
+			<phone>Al Telefono</phone>
+			<rooms>
+				<room>El Bar</room>
+				<room>Crystal Playa</room>
+				<room>Coco Playa</room>
+				<room>Green Fields</room>
+				<room>Arboles Rojos</room>
+				<room>La Luna</room>
+				<room >Paraiso Playa</room>
+			</rooms>
+			<chooseavatar>Elige tu Avatar</chooseavatar>
+			<showlog>Historial</showlog>
+			<hidelog>Ocultar Historial</hidelog>
+			<changestatus>Cambia Estatus</changestatus>
+			<changeroom>Cambia Sala</changeroom>
+			<changename>Cambia Nombre</changename>
+			<changeavatar>Cambia Avatar</changeavatar>
+			<exit>Salir</exit>
+			<invite>Invitar a Privado</invite>
+			<ignore>Ignorar</ignore>
+			<unignore>No Ignorar</unignore>
+			<invitation>%name Te Invita Privado</invitation>
+			<joinedprivate>%name unido en chat privado.</joinedprivate>
+			<usernotfound>Usuario no Encontrado.</usernotfound>
+			<inprivate>PRIVADO</inprivate>
+			<ignored>IGNORADO</ignored>	
+			<accept>Aceptar</accept>
+			<reject>Rechazar</reject>
+			<invitationaccepted>Invitatcion aceptada</invitationaccepted>
+			<openwindow>Abrir Privado</openwindow>
+			<youareconnected>Estas Conectado.</youareconnected>
+			<nickinuse>Nick en uso!</nickinuse>
+			<disconnected>Desconectado.</disconnected>
+			<userjoin>%name se unio al chat.</userjoin>
+			<userleft>%name dejo la sala.</userleft>
+			<userstatus>%name cambio a %status.</userstatus>
+			<username>%name cambio nombre a %newname.</username>
+			<userdisconnected>%name desconectado.</userdisconnected>
+		</language>	
+			<language id="it">
+			<name>Italiano</name>
+			<title>Benvenuti alla ChatPoint.TV!</title>
+			<typename>Inserisci tuo Nome</typename>
+			<defaultname>Asempio</defaultname>
+			<connect>Collegare</connect>
+			<announcement>Announcement:</announcement>
+			<chooseroom>Scelta Stanza</chooseroom>
+			<choosestatus>Stato</choosestatus>
+			<choosename>Cambiare Nome</choosename>
+			<confirm>Confermare</confirm>
+			<online>Online</online>
+			<absent>Assente</absent>
+			<eating>Mangiare</eating>
+			<phone>Il telefono</phone>
+			<rooms>
+				<room>Il Bar</room>
+				<room>Crystal Spiaggia</room>
+				<room>Coco Spiaggia</room>
+				<room>Green Fields</room>
+				<room>Alberi Red</room>
+				<room>Luna</room>
+				<room >Paraiso Spiaggia</room>
+			</rooms>
+			<chooseavatar>scelta il tuo Avatar</chooseavatar>
+			<showlog>Historico</showlog>
+			<hidelog>Nascondi Historico</hidelog>
+			<changestatus>Modifica stato</changestatus>
+			<changeroom>Modifica Stanza</changeroom>
+			<changename>Modifica Nome</changename>
+			<changeavatar>Modifica Avatar</changeavatar>
+			<exit>uscire</exit>
+			<invite>Invita privato</invite>
+			<ignore>Ignorare</ignore>
+			<unignore>non ignorare</unignore>
+			<invitation>%name Privato vi invita</invitation>
+			<joinedprivate>%name insieme in chat privata.</joinedprivate>
+			<usernotfound>Usuario non trovato.</usernotfound>
+			<inprivate>PRIVATO</inprivate>
+			<ignored>IGNORATO</ignored>	
+			<accept>Accettare</accept>
+			<reject>Rifiutare</reject>
+			<invitationaccepted>Invitatcion accettato</invitationaccepted>
+			<openwindow>Privati ??aperti</openwindow>
+			<youareconnected>Queste in linea.</youareconnected>
+			<nickinuse>Nick usato!</nickinuse>
+			<disconnected>Non in linea.</disconnected>
+			<userjoin>%name unito alla chat.</userjoin>
+			<userleft>%name lasciare la stanza.</userleft>
+			<userstatus>%name cambiare %status.</userstatus>
+			<username>%name cambiare nome a %newname.</username>
+			<userdisconnected>%name offline.</userdisconnected>
+		</language>		
+		<language id="en">
+			<name>English</name>
+			<title>Welcome to ChatPoint.TV!</title>
+			<typename>Please type your name</typename>
+			<defaultname>Guest</defaultname>
+			<connect>Connect</connect>
+			<announcement>Announcement:</announcement>
+			<chooseroom>Choose a room</chooseroom>
+			<choosestatus>Choose status</choosestatus>
+			<choosename>Choose a name</choosename>
+			<confirm>Confirm</confirm>
+			<online>Online</online>
+			<absent>Absent</absent>
+			<eating>Eating</eating>
+			<phone>In the phone</phone>
+			<rooms>
+				<room>The Bar</room>
+				<room>Crystal Beach</room>
+				<room>Coco Beach</room>
+				<room>Green Fields</room>
+				<room>Red Trees</room>
+				<room>Moon</room>
+				<room >Paradise Beach</room>
+			</rooms>
+			<chooseavatar>Choose an avatar</chooseavatar>
+			<showlog>Show log</showlog>
+			<hidelog>Hide log</hidelog>
+			<changestatus>Change status</changestatus>
+			<changeroom>Change room</changeroom>
+			<changename>Change name</changename>
+			<changeavatar>Change avatar</changeavatar>
+			<exit>Exit</exit>
+			<invite>Invite to private</invite>
+			<ignore>Ignore</ignore>
+			<unignore>Unignore</unignore>
+			<invitation>%name is inviting you to private chat</invitation>
+			<joinedprivate>%name joined the private chat.</joinedprivate>
+			<usernotfound>User was not found.</usernotfound>
+			<inprivate>PRIVATE</inprivate>
+			<ignored>IGNORED</ignored>	
+			<accept>Accept</accept>
+			<reject>Reject</reject>
+			<invitationaccepted>Invitation accepted</invitationaccepted>
+			<openwindow>Open window</openwindow>
+			<youareconnected>You are connected.</youareconnected>
+			<nickinuse>Nick already in use!</nickinuse>
+			<disconnected>Disconnected.</disconnected>
+			<userjoin>%name joined the room.</userjoin>
+			<userleft>%name left the room.</userleft>
+			<userstatus>%name is now %status.</userstatus>
+			<username>%name changed the name to %newname.</username>
+			<userdisconnected>%name disconnected.</userdisconnected>
+		</language>
+		<language id="pt">
+			<name>Portuguñs</name>
+			<title>Bem-vindo ao ChatPoint.TV!</title>
+			<typename>Por favor, digite o seu nome</typename>
+			<defaultname>Convidado</defaultname>
+			<announcement>Anñncio:</announcement>
+			<connect>Conectar</connect>
+			<chooseroom>Escolha uma sala</chooseroom>
+			<choosestatus>Escolha o status</choosestatus>
+			<choosename>Escolha um nome</choosename>
+			<confirm>Confirmar</confirm>
+			<online>Online</online>
+			<absent>Ausente</absent>
+			<eating>Comendo</eating>
+			<phone>No telefone</phone>
+			<rooms>
+				<room>Fiesta</room>
+				<room>Praia Cristalina</room>
+				<room>Praia do Coco</room>
+				<room>Campos Verdes</room>
+				<room>ñrvores Vermelhas</room>
+				<room>Lua</room>
+				<room >Praia Paradisñaca</room>
+			</rooms>
+			<chooseavatar>Escolha um avatar</chooseavatar>
+			<showlog>Mostrar registro</showlog>
+			<hidelog>Esconder registro</hidelog>
+			<changestatus>Mudar status</changestatus>
+			<changeroom>Mudar sala</changeroom>
+			<changename>Mudar nome</changename>
+			<changeavatar>Mudar avatar</changeavatar>
+			<exit>Sair</exit>
+			<invite>Convidar para privado</invite>
+			<ignore>Ignorar</ignore>
+			<unignore>Nño ignorar</unignore>
+			<invitation>%name estñ convidando vocñ para o chat privado.</invitation>
+			<joinedprivate>%name entrou na conversa privada.</joinedprivate>
+			<usernotfound>Usuñrio nño encontrado.</usernotfound>
+			<inprivate>PRIVADO</inprivate>
+			<ignored>IGNORADO</ignored>
+			<accept>Aceitar</accept>
+			<reject>Rejeitar</reject>
+			<invitationaccepted>Convite aceito</invitationaccepted>
+			<openwindow>Abrir janela</openwindow>
+			<youareconnected>Vocñ estñ conectado.</youareconnected>
+			<nickinuse>Nick jñ em uso!</nickinuse>
+			<disconnected>Desconectado.</disconnected>
+			<userjoin>%name entrou na sala.</userjoin>
+			<userleft>%name saiu da sala.</userleft>
+			<userstatus>%name estñ %status.</userstatus>
+			<username>%name mudou de nome para %newname.</username>
+			<userdisconnected>%name desconectou.</userdisconnected>
+		</language>		
+	
+	</languages>
+</chat>

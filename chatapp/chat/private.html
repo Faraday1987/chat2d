@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Private Chat2D</title>
+	<link href="index.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#avatarChatCanvas {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+		#avatarChatInput {
+			position: absolute;
+			left: 10px;
+			bottom: 10px;
+		}
+
+		#avatarChatAnnouncement {
+			top: 10px;
+		}
+	</style>
+	<script>
+		Chat = window.opener.Chat;
+		chat = window.opener.chat;
+		chat.private.room = chat.room;
+		var user = chat.users[0];
+		user.px = user.x;
+		user.py = user.y;
+		chat.private.users = [user];
+		function main() {
+			chat.private.avatarChat = document.getElementById("avatarChat");
+			chat.private.avatarChat.appendChild(user.privateBlob);
+			chat.private.avatarChat.appendChild(user.privateStatusElement);
+			chat.private.avatarChat.appendChild(user.privateNameElement);
+			chat.private.avatarChat.appendChild(user.privateIgnoredElement);
+
+			chat.private.canvas = document.getElementById("avatarChatCanvas");
+			chat.private.ctx = chat.private.canvas.getContext("2d");
+			chat.private.input = document.getElementById("avatarChatInput");
+			chat.private.background = document.getElementById("avatarChatBackground");
+			chat.private.bgimg = chat.private.background.getElementsByTagName("img")[0];
+			chat.private.embed = chat.private.background.getElementsByTagName("embed")[0];
+
+			chat.private.wasLoaded = 1;
+
+			if (Chat.roomNames[chat.private.room].indexOf(".gif") < 0)
+				chat.private.bgimg.src = Chat.backgrounds[chat.private.room].src;
+			else
+				chat.private.embed.src = Chat.backgrounds[chat.private.room].src + ".gif";
+
+			(window.onresize = function () {
+				var canvas = chat.private.canvas;
+				var input = chat.private.input;
+				canvas.width = innerWidth;
+				canvas.height = innerHeight;
+
+				chat.private.bgimg.style.width = innerWidth + "px";
+				chat.private.bgimg.style.height = innerHeight + "px";
+				chat.private.embed.width = innerWidth;
+				chat.private.embed.height = innerHeight;
+
+				input.style.width = (innerWidth - 20) + "px";
+
+				chat.privateDraw();
+				for (var i = 0; i < chat.private.users.length; i++)
+					Chat.privateSetPosition(chat.private.users[i]);
+			})();
+			document.getElementById("avatarChatSmiles").innerHTML = window.opener.document.getElementById("avatarChatSmiles").innerHTML;
+		}
+	</script>
+</head>
+
+<body onload="main()" onunload="chat.exitPrivate()">
+	<div id="avatarChat"
+		onmousemove="if (document.getElementById('avatarChat').isDown) { chat.privateGetPosition(event,1); chat.privateChangePosition(event._mx,event._my,chat.private.users[0]); }">
+		<div id="avatarChatBackground" ondragstart="return false"
+			onmouseup="if (document.getElementById('avatarChat').isDown) { document.getElementById('avatarChat').isDown=0; chat.privateGetPosition(event); chat.privateChangePosition(event._mx,event._my,chat.private.users[0],1); }"
+			onmousedown="document.getElementById('avatarChat').isDown=1; chat.privateGetPosition(event); chat.privateChangePosition(event._mx,event._my,chat.private.users[0],1);">
+			<img />
+			<embed wmode="opaque" />
+		</div>
+		<canvas id="avatarChatCanvas"></canvas>
+		<div id="emoticonsListButton">
+			<img id="avatarChatSmileButton" src="graphics/ui/smile.png" onclick="switchSmile()" />
+		</div>
+		<input type="text" id="avatarChatInput"
+			onkeyup="if (event.keyCode == 13 && this.value!='') { chat.privateSay(this.value,chat.private.users[0]); this.value='' }" />
+		<div id="avatarChatSmiles"> </div>
+	</div>
+</body>
+
+</html>

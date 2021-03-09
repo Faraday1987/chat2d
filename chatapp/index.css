@@ -1,0 +1,506 @@
+@font-face {
+	font-family: pixelmix;
+	src: url(graphics/fonts/pixelmix.ttf)
+}
+
+body {
+	font-family: Arial;
+	background-color: rgb(224,223,222);
+	overflow: hidden;
+}
+
+#notChrome {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#notChrome div {
+
+}
+
+#avatarChat {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+#avatarChatAnnouncement {
+	position: absolute;
+	top: 140px;
+	left: 0.75%;
+	width: 98.5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 2;
+	background-color: black;
+	color: white;
+}
+
+#avatarChatBackground, #avatarChatBackground img, #avatarChatBackground embed {
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	left: 0px;
+
+}
+
+#avatarChatBackground img {
+	pointer-events: unset;
+}
+
+#avatarChatAccept {
+	font-weight: bold;
+	position: absolute;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	width: 150px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -75px;
+	z-index: 99;
+}
+#avatarChatAccept button {
+	cursor: pointer;
+}
+#avatarChatAccept button:hover {
+	background-color: grey;
+	color: white;
+}
+
+#avatarChatRoomImages .roomOption{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+#avatarChatLog {
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+#avatarChat {
+	z-index: -2;
+}
+#avatarChatMain {
+	z-index: -2;
+}
+
+#avatarChatCanvas {
+	position: absolute;
+	margin: 0;
+	margin-bottom: -10px;
+	top: 0px;
+	left: 0px;
+	padding: 0;
+	pointer-events: none;
+}
+
+#avatarChatConnection {
+	position: absolute;
+}
+
+#avatarChat .blob {
+	z-index: 1;
+}
+
+#avatarChatLog {
+	z-index: 2;
+}
+
+#avatarChatInput, #avatarChatMenu, #avatarChatAds {
+	z-index: 3;
+}
+
+#avatarChatChangeRoom, #avatarChatChangeAvatar, #avatarChatChangeName, #avatarChatChangeStatus {
+	z-index: 4;
+}
+
+#avatarChatPrivateInvitation {
+	position: absolute;
+	padding: 10px;
+	z-index: 5;
+	background-color: black;
+	border-radius: 10px;
+	color: white;
+	opacity: 0.75;
+	height: 70px;
+	top: 50%;
+	left: 50%;
+	margin-top: -35px;
+}
+
+#avatarChatPrivateInvitation div {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+#avatarChatPrivateInvitation button {
+	width: 150px;
+	cursor: pointer;
+}
+
+#avatarChatPrivateInvitation button:hover {
+	color: white;
+	background-color: gray;
+}
+
+#avatarChatPrivateInvitation {
+	opacity: 1.0;
+}
+
+#avatarChat .status, #avatarChat .ignored, #avatarChat .private, #avatarChat .name {
+	pointer-events:none;
+}
+
+#avatarChat .private, #avatarChat .ignored {
+	position: absolute;
+	font-family: pixelmix; 
+	font-size: 8px;
+	border: 1px solid black;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+#avatarChat .private {
+	background-color: yellow;
+	color: black;
+}
+#avatarChat .ignored {
+	background-color: red;
+	color: white;
+}
+
+#avatarChatAds {
+	position: absolute;
+	height: 80px;
+	background-color: black;
+	opacity: 0.75;
+	
+	margin-left: 10px;
+	margin-top: 10px;
+	
+	color: white;
+	overflow: hidden;
+}
+
+#avatarChatMenu {
+	position: absolute;
+	opacity: 0.75;
+	background-color: black;
+	padding-bottom: 5px;
+	margin-left: 10px;
+	margin-top: 100px;
+}
+
+#avatarChatMenu:hover, #avatarChatAds:hover {
+	opacity: 0.95;
+	cursor: default;
+}
+
+#avatarChatMenu div {
+	font-weight: bold;
+	padding-top: 8px;
+	font-size: 15px;
+	color: white;
+	display: inline-block;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+#avatarChatMenu div:hover {
+	cursor: pointer;
+	text-shadow: 0px 0px 10px #fff;
+}
+
+#avatarChat div.title {
+	width: 590px;
+	margin: 5px;
+	font-weight: bold;
+	height: 15px;
+	display: inline-block;
+}
+
+#avatarChatChangeName div.title, #avatarChatChangeStatus div.title {
+	width: 160px;
+}
+
+#avatarChat .X {
+	width: 10px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#avatarChat .X:hover {
+	text-shadow: 0px 0px 10px white;
+}
+
+#avatarChat .blob {
+	position: absolute;
+	background-color: white;
+	padding: 4px;
+	border: 1px solid black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-family: pixelmix;
+	font-size: 8px;
+	text-align: left;
+}
+
+#avatarChat .status {
+	position: absolute;
+	padding-right: 2px;
+	padding-left: 2px;
+	font-family: pixelmix;
+	font-size: 8px;
+	background-color: rgb(100,122,255);
+	color: white;
+	letter-spacing: 1px;
+	font-weight: bold;
+	border: 1px solid white;
+}
+
+#avatarChat .name {
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgb(250, 230, 117);
+	color: black;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-family: pixelmix;	
+	font-size: 8px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+#avatarChat div.content {
+	height: 430px;
+	overflow: auto;
+}
+
+#avatarChat div.buttons {
+	height: 15px;
+}
+
+#avatarChat div.buttons button {
+	border: 0;
+	background-color: white;
+	margin-left: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+#avatarChat div.buttons button:hover {
+	background-color: gray;
+	color: white;
+}
+
+#avatarChatChangeRoom , #avatarChatChangeAvatar, #avatarChatChangeName, #avatarChatChangeStatus {
+	color: white;
+	position: absolute;
+	width: 640px;
+	height: 480px;
+	top: 50%;
+	left: 50%;
+	margin-top: -240px;
+	margin-left: -320px;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 10px;
+}
+
+#avatarChatChangeRoom:hover, #avatarChatChangeAvatar:hover, #avatarChatChangeName:hover, #avatarChatChangeStatus:hover {
+	opacity: 0.95;
+}
+
+#avatarChatChangeName, #avatarChatChangeStatus {
+	width: 200px;
+	height: 85px;
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+#avatarChatChangeStatus {
+	height: 120px;
+	margin-top: -60px;
+}
+
+#avatarChatChangeStatus button {
+	width: 100px;
+	cursor: pointer;
+}
+
+#avatarChatChangeStatus button:hover {
+	background-color: gray;
+	color: white;
+}
+
+#avatarChatChangeName input {
+	border: 0;
+	text-align: center;
+	margin-top: 5px;
+	width: 150px;
+}
+
+#avatarChatChangeName button {
+	width: 150px;
+	cursor: pointer;
+}
+
+#avatarChatChangeName button:hover {
+	background-color: gray;
+	color: white;
+}
+
+#avatarChatRoomImages img, #avatarChatAvatarImages  img{
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#avatarChatAvatarImages  img {
+	width: 50px;
+	height: 50px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#avatarChatRoomImages div {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#avatarChatRoomImages img:hover {
+	box-shadow: 0px 0px 20px white;
+}
+
+#avatarChatConnection b.title {
+	color: white;
+	text-shadow: 0px 0px 5px #000;
+}
+
+#avatarChatConnection div {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	color: white;
+	background-color: rgb(0,0,0);
+	border-radius: 5px;
+	box-shadow: 5px 5px 20px #000;
+	min-width: 250px;
+}
+
+#avatarChatConnection input {
+	border: 0;
+	margin: 5px;
+	width: 150px;
+	height: 15px;
+	font-size: 12px;
+	text-align: center;
+}
+
+select, option {
+	text-align: center;
+}
+
+#avatarChat button {
+	background-color: white;
+	border: 0;
+}
+
+#avatarChatConnection button {
+	width: 150px;
+	height: 19px;
+	margin-bottom: 7px;
+}
+
+#avatarChatConnection select {
+	border: 0;
+	width: 150px;
+	margin-bottom: 7px;
+}
+
+#avatarChatConnection button:hover {
+	cursor: pointer;
+	background-color: grey;
+	color: white;
+}
+
+#avatarChatInput {
+	position: absolute;
+	border: 0;
+	height: 20px;
+	font-size: 14px;
+	opacity: 0.75;	
+}
+#avatarChatSmiles {
+	position: absolute;		
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 14px;
+	opacity: 0.75;	
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+	margin: 20px;
+	z-index: 4;
+	display: none;
+	background: white;
+}
+#emoticonsListButton {
+	position: absolute;	
+	height: 20px;
+	font-size: 14px;
+	opacity: 0.75;	
+	bottom: 10px;
+	right: 10px;
+	z-index: 4;
+}
+
+#avatarChatInput:hover {
+	opacity: 1.0;
+}
+
+#avatarChatLog {
+	text-align: left;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: black;
+	margin-left: 10px;
+	color: white;
+	padding: 10px;
+	opacity: 0.75;
+	position: absolute;
+	opacity: 0.75;
+	overflow: auto;
+}
+
+#avatarChat .hidden {
+	display: none;
+}

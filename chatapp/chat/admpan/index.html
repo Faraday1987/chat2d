@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Administration Panel</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div id="connection"><b>Password</b><br/><input type="password" onkeyup="if (event.keyCode==13) connect(this.value),this.value=''"></div>
+		<div id="panel">
+			Announcement<br/>
+			<input onkeyup="if (event.keyCode==13) announce(this.value),this.value=''"/><br/>
+			Users list
+			<div id="userslist"></div>
+			Ban list
+			<div id="banlist">
+				<button>Clear all</button><br/>
+				<div class="ban"><b>127.0.0.1</b> <button>Clear</button></div><div class="ban"><b>127.0.0.1</b> <button>Clear</button></div>
+			</div>
+		</div>
+	</body>
+</html>

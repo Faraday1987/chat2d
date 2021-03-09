@@ -1,0 +1,13 @@
+{
+  "name": "avatar-chat",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "0.0.0-7",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "websocket": "*"
+  }
+}

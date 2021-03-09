@@ -1,0 +1,57 @@
+body {
+	font-family: Arial;
+}
+
+#connection {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -22px;
+	margin-left: -117px;
+}
+#connection input {
+	text-align: center;
+}
+
+.user img, .user div, .user button {
+	margin-left: 10px;
+}
+
+#panel {
+	padding: 2px;
+	position: absolute;
+	border: 1px solid black;
+	width: 796px;
+	left: 50%;
+	margin-left: -400px;
+	display: none;
+}
+
+#panel input {
+	width: 792px;
+}
+
+#userslist, #banlist {
+	margin-top: 2px;
+	padding: 2px;
+	text-align: left;
+	border: 1px solid black;
+}
+
+#banlist .ban {
+	display: inline-block;
+}
+
+#userslist .user {
+	padding: 2px;
+}
+
+#userslist .user img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#userslist .user div {
+	display: inline-block;
+}

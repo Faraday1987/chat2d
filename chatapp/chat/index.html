@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" >
+		<title>Chat2D</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<!-- Add icon library -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+			<div id="avatarChat" width="800" height="600" fullscreen="true"
+				onmousemove="if ($('avatarChatBackground').isDown) { chat.getPosition(event,1); chat.changePosition(event._mx,event._my,chat.users[0]); }; if ($('avatarChatLog').isMoving) { chat.log.dx = event.clientX - chat.log.x0; chat.log.dy = event.clientY - chat.log.y0; window.onresize(); }" onmouseup="if ($('avatarChatLog').isMoving) { $('avatarChatLog').isMoving = 0; chat.log.x += chat.log.dx; chat.log.y += chat.log.dy; chat.log.dx = 0; chat.log.dy = 0;}">
+				<div id="avatarChatAnnouncement" class="hidden"></div>
+				<div id="avatarChatAccept" class="hidden">
+					<b id="invitationaccepted">Invitation accepted</b><br/>
+					<button id="openwindow" onclick="chat.private=window.open('private.html','','width=640,height=480'); hide(this.parentNode)">Open window</button>
+				</div>
+				<div id="avatarChatReConnection">
+						SE DESCONECTO POR FAVOR CONECTAR DE NUEVO
+				</div>
+				<div id="avatarChatConnection">
+                
+					<b id="title" class="title"></b><br/><br/>
+					<div>
+						<b id="typename"></b><br/>
+						<input  id="defaultname"
+								onkeyup="if (event.keyCode == 13) avatarChatConnect()"
+								onfocus="if (this.value=='Guest'||this.value=='Invitado'||this.value=='Convidado'||this.value=='Asempio') this.value=''"
+								onblur="if (this.value=='') this.value='Guest'"
+								value="Guest" /><br/>
+						<select id="avatarChatLanguages" onchange="var langs = cfg.getElementsByTagName('language'); for (var i=0; i < langs.length; i++) if (langs[i].getAttribute('id') == this.options[this.selectedIndex].value) loadLanguage(langs[i])"></select><br/>
+						<button id="connect" onclick="avatarChatConnect()">Connect</button>
+					</div>
+				</div>
+
+				<div id="avatarChatMain" class="hidden">
+										<div id="avatarChatAds">
+						<br/><b>Ads here</b>
+						<br/><b>Ads here</b>
+					</div>
+					<div id="avatarChatMenu">
+						<div id="invite" onclick="chat.invitePrivate()" class="hidden">Invite to private</div>
+						<div id="ignore" onclick="chat.ignoreUser()" class="hidden">Ignore</div>
+						<div id="showlog" onclick="Chat.switchLog()">Show log</div>
+						<div id="changestatus" onclick="Chat.showChangeStatus()">Change status</div>
+						<div id="changeroom" onclick="Chat.showChangeRoom()">Change room</div>
+						<div id="changename" onclick="Chat.showChangeName()">Change name</div>
+						<div id="changeavatar" onclick="Chat.showChangeAvatar()">Change avatar</div>
+						<div id="exit" onclick="chat.quit()">Exit</div>
+					</div>
+					<div id="avatarChatLog" class="hidden" onmousedown="this.isMoving=true; this.x0 = event.clientX; this.y0 = event.clientY;"></div>
+					<div id="avatarChatBackground" ondragstart="return false" onmousedown="this.isDown=true; chat.getPosition(event); chat.changePosition(event._mx,event._my,chat.users[0],1);"
+						onmouseup="this.isDown=false; chat.getPosition(event); chat.changePosition(event._mx,event._my,chat.users[0],1);">
+						<img />
+						<embed width="1" height="1" wmode="opaque">
+					</div>
+					<canvas id="avatarChatCanvas" onclick="alert(1)"></canvas>
+					<div id="avatarChatSmiles">	</div>
+					<input id="avatarChatInput" onkeyup="if (event.keyCode == 13 && this.value!='') { chat.say(this.value); this.value='' }" />
+					<div id="emoticonsListButton">
+						<!-- <img id="avatarChatSmileButton" src="graphics/ui/smile.png" onclick="switchSmile()" /> -->
+						<button id="avatarChatSmileButton" onclick="switchSmile()"><i class="far fa-smile"></i></button>
+					</div>
+				</div>
+				<div id="avatarChatPrivateInvitation" class="hidden">
+					<div id="avatarChatPrivateInvitationText"></div>
+					<button id="accept" onclick="chat.accept()">Accept</button><br/>
+					<button id="reject" onclick="chat.refuse()">Reject</button>
+				</div>
+				
+				<div id="avatarChatChangeRoom" class="hidden">
+					<div class="title" id="chooseroom">Choose a room</div><div id="avatarChatRoomX" class="X hidden" onclick="hide($('avatarChatChangeRoom'))">x</div>
+					<div id="avatarChatRoomImages" class="content"></div>
+				</div>
+				
+				<div id="avatarChatChangeAvatar" class="hidden">
+					<div class="title" id="chooseavatar">Choose an avatar</div><div id="avatarChatAvatarX" class="X hidden" onclick="hide($('avatarChatChangeAvatar'))">x</div>
+					<div id="avatarChatAvatarImages" class="content"></div>
+				</div>
+				
+				<div id="avatarChatChangeName" class="hidden">
+					<div class="title" id="choosename">Choose a name</div><div id="avatarChatNameX" class="X" onclick="hide($('avatarChatChangeName'))">x</div>
+					<input id="avatarChatNewName" type="text" onkeyup="if (event.keyCode == 13) chat.changeName(this.value);"/>
+					<button id="confirm" onclick="chat.changeName($('avatarChatNewName').value)">Confirm</button>
+				</div>
+				
+				<div id="avatarChatChangeStatus" class="hidden">
+					<div class="title" id="choosestatus">Choose a status</div><div id="avatarChatRoomX" class="X" onclick="hide($('avatarChatChangeStatus'))">x</div>
+					<button id="online" onclick="chat.changeStatus(0); hide($('avatarChatChangeStatus'));">Online</button><br/>
+					<button id="absent" onclick="chat.changeStatus(1); hide($('avatarChatChangeStatus'));">Absent</button><br/>
+					<button id="eating" onclick="chat.changeStatus(2); hide($('avatarChatChangeStatus'));">Eating</button><br/>
+					<button id="phone" onclick="chat.changeStatus(3); hide($('avatarChatChangeStatus'));">In the phone</button>
+				</div>
+
+			</div>
+	</body>
+</html>
