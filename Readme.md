@@ -2,7 +2,7 @@
 
 [Demo CHAT] (https://chat2dapp.web.app/)
 
-[Demo SERVER] (https://serverchat2d.herokuapp.com/)
+[Demo SERVER] (https://chatserver2d.fly.dev/)
  
 
 _Chat 2d Gràfico Avatares Version 1.0_
@@ -76,7 +76,7 @@ _Personas que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Chat 2D en Java Applet de ticketmaster elfoco.com año 1998** - *Idea original* - [Ticketmaster](https://www.ticketmaster.com/)
 
-* **Jesus estrada chavez** - *Ilustrador*
+* **Jesus estrada chavez** - *Ilustrador de avatares*
 
 ## Licencia 📄
 
